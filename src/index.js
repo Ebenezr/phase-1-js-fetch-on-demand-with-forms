@@ -6,6 +6,7 @@ const init = () => {
     const input = document.querySelector('input#searchByID');
     console.log(input.value);
     //specify the url with user input
+    //exception if data not found
     try{
     fetch(`http://localhost:3000/movies/${input.value}`)
     .then(response => response.json())
@@ -17,6 +18,7 @@ const init = () => {
         title.innerText = data.title;
         summary.innerText = data.summary;
     });
+    //if movie not found do..
 }catch(error){
     document.querySelector('section#movieDetails h4').innerText = 'Movie not found';
     document.querySelector('section#movieDetails p').innerText = 'Please try again';
