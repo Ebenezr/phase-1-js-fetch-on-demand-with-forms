@@ -18,7 +18,7 @@ const init = () => {
         title.innerText = data.title;
         summary.innerText = data.summary;
     });
-    //if movie not found do..
+    //if movie not found do...
 }catch(error){
     document.querySelector('section#movieDetails h4').innerText = 'Movie not found';
     document.querySelector('section#movieDetails p').innerText = 'Please try again';
